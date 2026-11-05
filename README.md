@@ -39,9 +39,9 @@
 
 | Nome completo | RM |
 |---|---|
-| _Preencher_ | _RM00000_ |
-| _Preencher_ | _RM00000_ |
-| _Preencher_ | _RM00000_ |
+| Pedro Luis Tofoli | RM564441 |
+| Raphael Talarico Nascimento Silva | RM565219 |
+| Nelson Troccoli Santos Neto | RM562815 |
 
 ## 4. Demonstração visual
 
