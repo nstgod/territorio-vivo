@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="t d">
+  <title id="t">Território Vivo</title>
+  <desc id="d">Painel de inteligência territorial preditiva da Zona Leste de São Paulo</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00382F"/>
+      <stop offset="1" stop-color="#00695C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="24" fill="url(#bg)"/>
+  <!-- curvas de nível estilizadas -->
+  <g fill="none" stroke="#B2DFDB" stroke-opacity="0.18" stroke-width="2">
+    <path d="M700 300 C760 200 900 180 1000 220 S1160 260 1200 200"/>
+    <path d="M660 300 C730 170 900 140 1010 185 S1170 225 1200 160"/>
+    <path d="M620 300 C700 140 900 100 1020 150 S1180 190 1200 120"/>
+    <path d="M580 300 C670 110 900 60 1030 115 S1190 155 1200 80"/>
+  </g>
+  <!-- linha de tendência com previsão -->
+  <polyline points="760,210 800,190 840,200 880,170 920,180 960,150" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="960,150 1000,135 1040,120 1080,110" fill="none" stroke="#FFC857" stroke-width="5" stroke-dasharray="10 8" stroke-linecap="round"/>
+  <circle cx="1080" cy="110" r="12" fill="#FFC857"/>
+  <!-- marca -->
+  <g transform="translate(70 92)">
+    <circle cx="48" cy="48" r="48" fill="#B2DFDB"/>
+    <path d="M48 18 C33 18 22 29 22 43 C22 62 48 82 48 82 C48 82 74 62 74 43 C74 29 63 18 48 18 Z" fill="#00695C"/>
+    <circle cx="48" cy="43" r="10" fill="#B2DFDB"/>
+  </g>
+  <text x="200" y="140" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="58" font-weight="700" fill="#FFFFFF">Território Vivo</text>
+  <text x="202" y="188" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="24" fill="#B2DFDB">Inteligência territorial preditiva · Zona Leste de São Paulo</text>
+</svg>
