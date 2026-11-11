@@ -215,8 +215,8 @@ test/                # 49 testes: motor de alertas, estatística, validação, p
 **Pré-requisitos:** Flutter 3.35+ (Dart 3.9+), Android Studio/SDK ou Chrome.
 
 ```bash
-git clone https://github.com/<usuario>/<repositorio>.git
-cd <repositorio>
+git clone https://github.com/nstgod/territorio-vivo.git
+cd territorio-vivo
 flutter pub get
 ```
 
