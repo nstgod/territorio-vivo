@@ -98,7 +98,7 @@
 
 **Diferenciais**
 - [x] Dados reais (Open-Meteo / CAMS) · [x] Mapa (OpenStreetMap) · [x] Notificações locais de alertas críticos
-- [x] IA generativa (Claude) para explicação simples, com fallback local · [x] Animações com propósito
+- [x] Animações com propósito
 - [x] Modo escuro e alto contraste · [x] **49 testes automatizados** · [x] APK de release
 
 ## 6. Dados e alertas
@@ -163,8 +163,8 @@ O app **nunca executa ações**. Notificações apenas avisam que há um alerta 
 - `Anonymizer` remove automaticamente **e-mail, telefone, CPF, CEP e número de endereço** do texto antes de salvar, e o formulário avisa em tempo real o que será removido.
 - Identificador do aparelho é um **token aleatório**, não derivado de dados pessoais.
 - **Consentimento explícito** na primeira abertura, com duas confirmações. Pode ser revisto e **revogado em Ajustes, apagando todos os dados locais**.
-- Dados ficam no aparelho (SharedPreferences). A explicação por IA envia **só números agregados do alerta**.
-- Chave de API fora do código versionado (`--dart-define-from-file`, arquivo ignorado pelo Git).
+- Dados ficam no aparelho (SharedPreferences); nenhum dado pessoal é enviado a servidores.
+- Nenhuma chave de API ou credencial no código: as APIs usadas (Open-Meteo e OpenStreetMap) são públicas e sem chave.
 
 **Acessibilidade**
 - Contraste: paleta validada e tema de **alto contraste** (alvo WCAG AAA, ≥ 7:1) em claro e escuro, bordas de 2 px.
@@ -186,7 +186,6 @@ O app **nunca executa ações**. Notificações apenas avisam que há um alerta 
 | **flutter_map + latlong2** | Mapa com tiles do OpenStreetMap, sem chave de API |
 | **flutter_local_notifications** | Notificação local de alertas críticos com confiança mínima configurável |
 | **intl / flutter_localizations** | Formatação pt-BR e componentes Material em português |
-| **Claude (Anthropic API)** via HTTP | Explicação em linguagem simples (`claude-opus-5-5`, esforço baixo, fallback no servidor). Opcional: sem chave, um texto local é gerado a partir das evidências |
 | **Modelo estatístico próprio** | Regressão + sazonalidade semanal + teste de significância: leve, roda offline no aparelho e é explicável |
 
 **Arquitetura (camadas)**
@@ -220,21 +219,13 @@ cd territorio-vivo
 flutter pub get
 ```
 
-**Variáveis de ambiente (opcional — só para a explicação por IA):**
-
-```bash
-cp config/dart_defines.example.json config/dart_defines.json
-# edite config/dart_defines.json e preencha ANTHROPIC_API_KEY
-```
-
-O arquivo `config/dart_defines.json` está no `.gitignore`. Sem chave, o app funciona normalmente com a explicação local.
+**Variáveis de ambiente:** nenhuma é necessária — as APIs usadas são públicas e não exigem chave.
 
 **Rodar:**
 
 ```bash
-flutter run --dart-define-from-file=config/dart_defines.json   # com IA
-flutter run                                                    # sem IA
-flutter run -d chrome                                          # versão web
+flutter run              # Android (emulador ou aparelho)
+flutter run -d chrome    # versão web
 ```
 
 **Testes e análise estática:**
