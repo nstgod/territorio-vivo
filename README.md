@@ -258,7 +258,7 @@ O APK fica em `build/app/outputs/flutter-apk/app-release.apk` e também está pu
 
 ## 10. Vídeo
 
-🎬 **Demonstração (até 3 min):** _[link do YouTube/Drive — preencher]_
+🎬 **Demonstração (até 3 min):** https://youtu.be/5XfqMSQ8C1w
 
 O roteiro usado na gravação está em [`docs/roteiro-video.md`](docs/roteiro-video.md).
 
