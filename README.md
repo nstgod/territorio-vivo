@@ -99,7 +99,7 @@
 **Diferenciais**
 - [x] Dados reais (Open-Meteo / CAMS) · [x] Mapa (OpenStreetMap) · [x] Notificações locais de alertas críticos
 - [x] Animações com propósito
-- [x] Modo escuro e alto contraste · [x] **49 testes automatizados** · [x] APK de release
+- [x] Modo escuro e alto contraste · [x] **49 testes automatizados** · [x] [APK de release](https://github.com/nstgod/territorio-vivo/releases/tag/v1.0.0)
 
 ## 6. Dados e alertas
 
@@ -241,7 +241,9 @@ flutter test
 flutter build apk --release
 ```
 
-O APK fica em `build/app/outputs/flutter-apk/app-release.apk` e também está publicado em **Releases** do repositório.
+O APK fica em `build/app/outputs/flutter-apk/app-release.apk`.
+
+📦 **APK pronto para instalar:** [territorio-vivo-v1.0.0.apk](https://github.com/nstgod/territorio-vivo/releases/download/v1.0.0/territorio-vivo-v1.0.0.apk) — [página da Release v1.0.0](https://github.com/nstgod/territorio-vivo/releases/tag/v1.0.0)
 
 > **Dica (Windows):** se o caminho do projeto tiver acentos (ex.: "Área de Trabalho"), mova-o para um caminho sem acentos antes de compilar. O compilador de shaders do Flutter falha nesses caminhos.
 
